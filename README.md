@@ -1,7 +1,11 @@
 
 # Ambiainvis
 
-environmental monitoring to welcome you home
+Environmental monitoring to welcome you home.
+
+## Overview
+
+![Overview](Ambiainvis.drawio.png)
 
 ## Sensors
 
@@ -80,6 +84,19 @@ https://aliexpress.com/item/1005003829532007.html
 - Voltage: ???
 - Current: ???
 
+### Particulate Matter - PMS5003/PMS7003
+
+- Interface: ???
+- Accuracy PM2.5: ???
+- Voltage: ???
+- Current: ???
+
+https://aqicn.org/sensor/pms5003-7003/
+https://aqicn.org/air/sensor/spec/pms5003-english-v2.3.pdf
+https://aqicn.org/air/sensor/spec/pms7003-english-v2.5.pdf
+
+### ???
+
 ## Actors
 
 ### NVRAM - AT24C256
@@ -107,4 +124,3 @@ https://github.com/adafruit/Adafruit_SSD1306
 | -- | -- |
 | TVOC | Total Volatile Organic Compound |
 | eCO2 | Equivalent CO2 |
-
