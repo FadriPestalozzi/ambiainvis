@@ -1,7 +1,10 @@
 
 # Ambiainvis
 
-Environmental monitoring to welcome you home.
+Environmental monitoring to welcome you home. 
+
+A creation from the Romansh words for environment (ambiaint) and welcome (bainvis).
+
 
 ## Overview
 
