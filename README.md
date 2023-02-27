@@ -5,7 +5,6 @@ Environmental monitoring to welcome you home.
 
 A creation from the Romansh words for environment (ambiaint) and welcome (bainvis).
 
-
 ## Overview
 
 ![Overview](Ambiainvis.drawio.png)
@@ -15,8 +14,8 @@ A creation from the Romansh words for environment (ambiaint) and welcome (bainvi
 ### Humidity & Temperature - Si7021
 
 - Interface: I2C
-- Humdity Range: 0% - 100%
-- Humdity Accuracy (Typical, 0% - 80%): ±2%
+- Relative Humdity Range: 0% - 100%
+- Relative Humdity Accuracy (Typical, 0% - 80%): ±2%
 - Temperature Range: -40°C - 85°C
 - Temperature Accuracy (Typical, -10°C - 85°C): ±0.3°C
 - Voltage: 1.9V - 3.6V
@@ -29,8 +28,8 @@ https://aliexpress.com/item/4000074032970.html
 ### Humidity & Temperature - SHT30-D
 
 - Interface: I2C
-- Humdity Range: 0% - 100%
-- Humdity Accuracy (Typical, 10% - 90%): ±2%
+- Relative Humdity Range: 0% - 100%
+- Relative Humdity Accuracy (Typical, 10% - 90%): ±2%
 - Temperature Range: -40°C - 125°C
 - Temperature Accuracy (Typical, 0°C - 65°C): ±0.2°C
 - Voltage: 2.15V - 5.5V
@@ -98,8 +97,6 @@ https://aqicn.org/sensor/pms5003-7003/
 https://aqicn.org/air/sensor/spec/pms5003-english-v2.3.pdf
 https://aqicn.org/air/sensor/spec/pms7003-english-v2.5.pdf
 
-### ???
-
 ## Actors
 
 ### NVRAM - AT24C256
@@ -120,6 +117,30 @@ https://aliexpress.com/item/1005003469549569.html
 https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf
 
 https://github.com/adafruit/Adafruit_SSD1306
+
+## Environment Values
+
+### CO2
+
+Outside (2023): 420 ppm
+Outside (1950): 311 ppm
+
+https://www.volker-quaschning.de/datserv/CO2/index.php
+
+- \< 1'000 ppm: everything fine
+- \> 2'000 ppm: fresh air necessary
+
+https://www.umweltbundesamt.de/sites/default/files/medien/pdfs/kohlendioxid_2008.pdf
+
+- \> 30'000 ppm / 30 minutes: intoxication
+- \> 70'000 ppm / 2 minutes: unconsciousness
+- \> 100'000 ppm: dangerous for life
+
+https://www.cdc.gov/niosh/idlh/124389.html
+
+### Relative Humidity
+
+
 
 ## Abbreviations
 
