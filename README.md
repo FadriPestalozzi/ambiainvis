@@ -148,3 +148,6 @@ https://www.cdc.gov/niosh/idlh/124389.html
 | -- | -- |
 | TVOC | Total Volatile Organic Compound |
 | eCO2 | Equivalent CO2 |
+| NDIR | Non-Dispersive Infrared |
+
+https://en.wikipedia.org/wiki/Nondispersive_infrared_sensor
