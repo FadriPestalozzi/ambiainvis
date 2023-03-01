@@ -43,10 +43,14 @@ https://aliexpress.com/item/32700729302.html
 ### NDIR CO2 - SCD40
 
 - Interface: I2C
-- CO2 Range: ???
-- CO2 Accuracy: ???
-- Voltage: ???
-- Current: ???
+- CO2 Range: 0ppm - 40'000ppm
+- CO2 Accuracy (400ppm - 2'000ppm): ±50ppm
+- Relative Humdity Range: 0% - 100%
+- Relative Humdity Accuracy (Typical, 15°C - 35°C, 20% - 65%): ±6%
+- Temperature Range: -10°C - 60°C
+- Temperature Accuracy (Typical, 15°C - 35°C): ±0.8°C
+- Voltage: 2.4V - 5.5V
+- Current (Typical, Periodic, 3.3V): 15mA
 
 https://sensirion.com/products/catalog/SCD40/
 https://sensirion.com/media/documents/E0F04247/631EF271/CD_DS_SCD40_SCD41_Datasheet_D1.pdf
