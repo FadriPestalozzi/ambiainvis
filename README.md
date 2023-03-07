@@ -1,7 +1,7 @@
 
 # Ambiainvis
 
-Environmental monitoring to welcome you home. 
+Environmental monitoring to welcome you home.
 
 A creation from the Romansh words for environment (ambiaint) and welcome (bainvis).
 
@@ -80,6 +80,14 @@ https://aliexpress.com/item/32863793412.html
 
 https://senseair.com/products/power-counts/sunlight-co2/
 
+### CO2 - MH-Z19
+
+- Interface: I2C
+- CO2 Range: ???
+- CO2 Accuracy: ???
+- Voltage: ???
+- Current: ???
+
 ### TVOC/eCO2 - CJMCU-811
 
 https://aliexpress.com/item/1005003829532007.html
@@ -100,6 +108,22 @@ https://aliexpress.com/item/1005003829532007.html
 https://aqicn.org/sensor/pms5003-7003/
 https://aqicn.org/air/sensor/spec/pms5003-english-v2.3.pdf
 https://aqicn.org/air/sensor/spec/pms7003-english-v2.5.pdf
+
+### Ozone - MQ131
+
+### VOC - MP503
+
+### Pressure - MPL3115A2
+
+- Interface: ???
+- Voltage: ???
+- Current: ???
+
+### Pressure - DPS310
+
+- Interface: ???
+- Voltage: ???
+- Current: ???
 
 ## Actors
 
@@ -144,7 +168,13 @@ https://www.cdc.gov/niosh/idlh/124389.html
 
 ### Relative Humidity
 
+- 30% - 65%: comfortable for humans
+- \> 60%: increased probability for molds
+- 40% - 60% & 18°C - 23°C: ideal for wood (floor, furniture, ...), as wood does not contract/expand in this range
 
+https://www.umweltbundesamt.de/sites/default/files/medien/publikation/long/2885.pdf
+https://www.umweltbundesamt.de/themen/faq-absenkung-der-raumtemperatur-in-herbst-winter
+https://www.venta-air.com/en_de/Usage/Humidity-for-wooden-floors-and-furniture/
 
 ## Abbreviations
 
@@ -153,5 +183,7 @@ https://www.cdc.gov/niosh/idlh/124389.html
 | TVOC | Total Volatile Organic Compound |
 | eCO2 | Equivalent CO2 |
 | NDIR | Non-Dispersive Infrared |
+| VOC | Volatile Organic Compound |
 
+https://en.wikipedia.org/wiki/Volatile_organic_compound
 https://en.wikipedia.org/wiki/Nondispersive_infrared_sensor
