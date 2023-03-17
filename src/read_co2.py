@@ -28,16 +28,17 @@ while True:
     # list(map(int, a.split(b' ')))  # combine int values of individual byte_strings into list
     # [1, 2, 3]         # values of individual byte_strings into list
 
-    if (line!="b''"): # first ser.readline == empty
+    if (len(line)!=0):
+    # if (line!=b''): # first ser.readline == empty
         # TypeError: must be str or None, not bytes
         # remove trailing " \r\n'" = last 5 chars (keep final ')
-        line = line[:-6]+"'"
+        # line = line[:-6]+"'"
         print(line)
 
         # convert byte_string into string
         # line=b'1 2 3'  # no error if this line is active
         line.split(b' ')  # 
-        values = list(map(int, line))
+        values = list(map(float, line))
         print(str(values))
 
     time.sleep(0.5) 
