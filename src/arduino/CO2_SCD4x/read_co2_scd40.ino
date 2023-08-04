@@ -4,7 +4,7 @@
 #define I2C_ADDRESS 0x62
 
 void setup() {
-  Serial.begin (115200);  // setup serial connection
+  Serial.begin (9600);  // setup serial connection
   Wire.begin();
 
   // start_periodic_measurement = 0x21b1 --> arduino library can only send 1 byte a time
