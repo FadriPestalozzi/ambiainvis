@@ -27,6 +27,8 @@ sudo apt install python3
 
 How to [connect](https://docs.arduino.cc/static/5fa18e7fb884a8f6381a54dae4d87551/29114/uno-i2c.png) Arduino Uno to I2C clock (SCL) and data (SDA) wires. 
 
+![I2C Pins on Arduino Uno](![Alt text](image.png))
+
 
 ### get I2C address
 
