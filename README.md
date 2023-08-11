@@ -9,14 +9,14 @@ A creation from the Romansh words for environment (ambiaint) and welcome (bainvi
 
 ### block diagram
 
-![Overview](Ambiainvis.drawio.png)
+![Overview](pics/Ambiainvis.drawio.png)
 
 
 Block diagram converted to schematics & layout via EasyEDA. 
 
 
 
-## Checklist
+## Installation
 
 - load [code](#code) onto Arduino
 - launch python 
@@ -31,7 +31,7 @@ sudo apt install python3
 
 How to [connect](https://docs.arduino.cc/static/5fa18e7fb884a8f6381a54dae4d87551/29114/uno-i2c.png) Arduino Uno to I2C clock (SCL) and data (SDA) wires. 
 
-![I2C Pins on Arduino Uno](I2C_Pins_on_Arduino_Uno.png)
+![I2C Pins on Arduino Uno](pics/I2C_Pins_on_Arduino_Uno.png)
 
 
 
@@ -39,9 +39,9 @@ How to [connect](https://docs.arduino.cc/static/5fa18e7fb884a8f6381a54dae4d87551
 
 | ID | I2C address | VCC | description |
 |----------|----------|----------|----------|
-| AT24C256   | 0x50 & 0x58   | 2.7 - 5.5 | storage EEPROM   |
-| SCD40   | 0x62  | 2.4 - 5.5 | sensor CO2    |
-| SHT21   | 0x40   | 2.1 - 3.6 | sensor humidity & temperature  |
+| [AT24C256](#at24c256)   | 0x50 & 0x58   | 2.7 - 5.5 | storage EEPROM   |
+| [SCD40](#scd40)   | 0x62  | 2.4 - 5.5 | sensor for CO2    |
+| [HTU21_SHT21](#hty21_sht21)   | 0x40   | 3.3-5 | sensor for humidity & temperature  |
 | [SSD1306](#display_ssd1306)   | 0x3C   | 3.3 - 5 | display OLED |
 <!-- | id   | i2c   | V | descr   | -->
 
@@ -65,17 +65,18 @@ https://en.wikipedia.org/wiki/Nondispersive_infrared_sensor
 
 ## Sensors
 
-### Humidity & Temperature - SHT21
+### hty21_sht21
 
+SHT21 Humidity & Temperature sensor with 
+HTU21 I2C level shifting circuitry to accept 3.3V-5V. 
+
+SHT21 specifications:
 - Relative Humdity Range: 0% - 100%
 - Relative Humdity Accuracy (Typical, 10% - 90%): ±2%
 - Temperature Range: -40°C - 125°C
 - Temperature Accuracy (Typical, 5°C - 60°C): ±0.3°C
 - Voltage: 2.1V - 3.6V
 - Current: 200µA - 300µA
-
-
-- need level shift since not 5,1V of SCL & SDA
 
 <!-- [name](link) --> 
 
@@ -84,7 +85,9 @@ https://en.wikipedia.org/wiki/Nondispersive_infrared_sensor
 [buy](https://www.aliexpress.com/item/1005005599036502.html?spm=a2g0o.productlist.main.15.26fc3b61qcOIhK&algo_pvid=36068584-1eb0-49a0-acb1-1a0740ca4d86&aem_p4p_detail=202307261228235955719856672000005500547&algo_exp_id=36068584-1eb0-49a0-acb1-1a0740ca4d86-7&pdp_npi=3%40dis%21CHF%211.03%211.03%21%21%211.17%21%21%4021021a7216903997033188158d076c%2112000033701436978%21sea%21CH%210&curPageLogUid=74QUFO1f7zjr&search_p4p_id=202307261228235955719856672000005500547_8)
 
 
-### NDIR CO2 - SCD40
+### scd40
+
+NDIR CO2 sensor
 
 - CO2 Range: 0ppm - 40'000ppm
 - CO2 Accuracy (400ppm - 2'000ppm): ±50ppm
@@ -104,13 +107,15 @@ https://aliexpress.com/item/1005004494206882.html
 
 ### TVOC/eCO2 - CJMCU-811
 
-https://aliexpress.com/item/1005003829532007.html
-
 - Interface: I2C
 - CO2 Range: ???
 - CO2 Accuracy: ???
 - Voltage: ???
 - Current: ???
+
+https://aliexpress.com/item/1005003829532007.html
+
+
 
 ### Particulate Matter - PMS5003/PMS7003
 
@@ -129,14 +134,14 @@ https://aqicn.org/air/sensor/spec/pms7003-english-v2.5.pdf
 
 ### Pressure - MPL3115A2
 
-
 ### Pressure - DPS310
 
 
 ## Actors
 
-### NVRAM - AT24C256
+### at24c256
 
+NVRAM - AT24C256
 - Storage (Bytes): 256 KB
 
 [datasheet](https://pdf1.alldatasheet.com/datasheet-pdf/view/56065/ATMEL/AT24C256.html)
@@ -185,13 +190,22 @@ https://www.venta-air.com/en_de/Usage/Humidity-for-wooden-floors-and-furniture/
 
 ## PCB
 
+Circuit diagram and layout were created with [EasyEDA](https://easyeda.com/editor#id=24dbcd1713c245d694e021eeda7a2357|4a071e91d0c34034897f0c1790f9c713). 
+
+### Circuit Diagram
+
+![ambiainvis_circuit_diagram](pics/ambiainvis_circuit_diagram.png)
+
+### Layout
+
+![ambiainvis_layout](pics/ambiainvis_layout.png)
 
 
+## Code
 
+### Arduino
 
-## code
-
-### get I2C address
+#### get I2C address
 
 ``` c
 // --------------------------------------
@@ -274,3 +288,4 @@ void loop() {
 }
 ```
 
+### Python
