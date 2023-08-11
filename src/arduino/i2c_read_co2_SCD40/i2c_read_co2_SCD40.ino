@@ -29,7 +29,7 @@ void loop() {
   Wire.requestFrom(I2C_ADDRESS,9); // number of bytes to read
   
   // Wire library = I2C
-  // store 3x values to measure each [co2, T, RH]
+  // store 3x values = [co2, T, RH]
     uint8_t v0 = Wire.read();
     uint8_t v1 = Wire.read();
     uint8_t v2 = Wire.read();
@@ -46,7 +46,12 @@ void loop() {
     Serial.print(word0);
     Serial.print(' ');
 
-    // range used to calculate T and RH
+    // sensor range to calculate T and RH
+    // 1u in binary is                   0000000000000001 
+    // Shifting it left by 16 bits gives 1000000000000000
+    // Subtracting 1 from that gives     0111111111111111
+    // range = 65535 = max value of unsigned 16-bit integer
+    // can represent values from 0 to 65535
     const uint32_t range = (1u << 16)-1;
 
     // wort1 = T
@@ -67,23 +72,3 @@ void loop() {
   // delay between measurements
   delay(5000);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

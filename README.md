@@ -5,6 +5,25 @@ Environmental monitoring to welcome you home.
 
 The title ambiainvis combines the Romansh words for environment (ambiaint) and welcome (bainvis).
 
+## work in progress
+
+- [ ] i2c_read_multiple.ino
+
+
+## component_overview
+
+| ID | I2C address | VCC | description |
+|----------|----------|----------|----------|
+| [AT24C256](#at24c256)   | 0x50 & 0x58   | 2.7 - 5.5 | EEPROM storage   |
+| [SCD40](#scd40)   | 0x62  | 2.4 - 5.5 | CO2 sensor   |
+| [HTU21_SHT21](#hty21_sht21)   | 0x40   | 3.3-5 | humidity & temperature sensor |
+| [SSD1306](#display_ssd1306)   | 0x3C   | 3.3 - 5 | OLED display |
+<!-- | id   | i2c   | V | descr   | -->
+
+
+
+
+
 ## Overview
 
 ### block diagram
@@ -22,19 +41,6 @@ Block diagram converted to schematics & layout via EasyEDA.
 How to [connect](https://docs.arduino.cc/static/5fa18e7fb884a8f6381a54dae4d87551/29114/uno-i2c.png) Arduino Uno to I2C clock (SCL) and data (SDA) wires. 
 
 ![I2C Pins on Arduino Uno](pics/I2C_Pins_on_Arduino_Uno.png)
-
-
-
-## component_overview
-
-| ID | I2C address | VCC | description |
-|----------|----------|----------|----------|
-| [AT24C256](#at24c256)   | 0x50 & 0x58   | 2.7 - 5.5 | storage EEPROM   |
-| [SCD40](#scd40)   | 0x62  | 2.4 - 5.5 | sensor for CO2    |
-| [HTU21_SHT21](#hty21_sht21)   | 0x40   | 3.3-5 | sensor for humidity & temperature  |
-| [SSD1306](#display_ssd1306)   | 0x3C   | 3.3 - 5 | display OLED |
-<!-- | id   | i2c   | V | descr   | -->
-
 
 
 
