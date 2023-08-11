@@ -3,7 +3,7 @@
 
 Environmental monitoring to welcome you home.
 
-A creation from the Romansh words for environment (ambiaint) and welcome (bainvis).
+The title ambiainvis combines the Romansh words for environment (ambiaint) and welcome (bainvis).
 
 ## Overview
 
@@ -16,16 +16,6 @@ Block diagram converted to schematics & layout via EasyEDA.
 
 
 
-## Installation
-
-- load [code](#code) onto Arduino
-- launch python 
-    - optionally check if installed
-
-```
-sudo apt install python3
-```
-
 
 ## Arduino & I2C
 
@@ -35,7 +25,7 @@ How to [connect](https://docs.arduino.cc/static/5fa18e7fb884a8f6381a54dae4d87551
 
 
 
-## component overview
+## component_overview
 
 | ID | I2C address | VCC | description |
 |----------|----------|----------|----------|
@@ -78,17 +68,16 @@ SHT21 specifications:
 - Voltage: 2.1V - 3.6V
 - Current: 200µA - 300µA
 
-<!-- [name](link) --> 
-
-[catalogue](https://www.sensirion.com/products/catalog/SHT21/)
-[datasheet](https://www.sensirion.com/media/documents/120BBE4C/63500094/Sensirion_Datasheet_Humidity_Sensor_SHT21.pdf)
-[buy](https://www.aliexpress.com/item/1005005599036502.html?spm=a2g0o.productlist.main.15.26fc3b61qcOIhK&algo_pvid=36068584-1eb0-49a0-acb1-1a0740ca4d86&aem_p4p_detail=202307261228235955719856672000005500547&algo_exp_id=36068584-1eb0-49a0-acb1-1a0740ca4d86-7&pdp_npi=3%40dis%21CHF%211.03%211.03%21%21%211.17%21%21%4021021a7216903997033188158d076c%2112000033701436978%21sea%21CH%210&curPageLogUid=74QUFO1f7zjr&search_p4p_id=202307261228235955719856672000005500547_8)
+Links
+- [catalogue](https://www.sensirion.com/products/catalog/SHT21/)
+- [datasheet](https://www.sensirion.com/media/documents/120BBE4C/63500094/Sensirion_Datasheet_Humidity_Sensor_SHT21.pdf)
+- [buy](https://www.aliexpress.com/item/1005005599036502.html?spm=a2g0o.productlist.main.15.26fc3b61qcOIhK&algo_pvid=36068584-1eb0-49a0-acb1-1a0740ca4d86&aem_p4p_detail=202307261228235955719856672000005500547&algo_exp_id=36068584-1eb0-49a0-acb1-1a0740ca4d86-7&pdp_npi=3%40dis%21CHF%211.03%211.03%21%21%211.17%21%21%4021021a7216903997033188158d076c%2112000033701436978%21sea%21CH%210&curPageLogUid=74QUFO1f7zjr&search_p4p_id=202307261228235955719856672000005500547_8)
+- [Component Overview](#component_overview)
 
 
 ### scd40
 
-NDIR CO2 sensor
-
+- Description: NDIR CO2 sensor
 - CO2 Range: 0ppm - 40'000ppm
 - CO2 Accuracy (400ppm - 2'000ppm): ±50ppm
 - Relative Humdity Range: 0% - 100%
@@ -98,12 +87,11 @@ NDIR CO2 sensor
 - Voltage: 2.4V - 5.5V
 - Current (Typical, Periodic, 3.3V): 15mA
 
-https://sensirion.com/products/catalog/SCD40/
-https://sensirion.com/media/documents/E0F04247/631EF271/CD_DS_SCD40_SCD41_Datasheet_D1.pdf
-
-https://aliexpress.com/item/1005004494206882.html
-
-
+Links
+- [manufacturer](https://sensirion.com/products/catalog/SCD40/)
+- [datasheet](https://sensirion.com/media/documents/E0F04247/631EF271/CD_DS_SCD40_SCD41_Datasheet_D1.pdf)
+- [buy](https://aliexpress.com/item/1005004494206882.html)
+- [Component Overview](#component_overview)
 
 ### TVOC/eCO2 - CJMCU-811
 
@@ -139,19 +127,28 @@ https://aqicn.org/air/sensor/spec/pms7003-english-v2.5.pdf
 
 ## Actors
 
-### at24c256
-
-NVRAM - AT24C256
+### at24c256 
+- Description: NVRAM - AT24C256
 - Storage (Bytes): 256 KB
 
-[datasheet](https://pdf1.alldatasheet.com/datasheet-pdf/view/56065/ATMEL/AT24C256.html)
-[buy](https://aliexpress.com/item/1005003469549569.html)
+Links
+- [datasheet](https://pdf1.alldatasheet.com/datasheet-pdf/view/56065/ATMEL/AT24C256.html)
+- [buy](https://aliexpress.com/item/1005003469549569.html)
+- [Component Overview](#component_overview)
+
+
+
 
 
 ### display_ssd1306
 
-[datasheet SBC-OLED01](https://files2.elv.com/public/25/2511/251189/Internet/251189_data_eng.pdf)
-[datasheet SSD1306](https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf)
+- Description: OLED Display SSD1306
+- Pixels: 128x64
+
+Links
+- [datasheet SBC-OLED01](https://files2.elv.com/public/25/2511/251189/Internet/251189_data_eng.pdf)
+- [datasheet SSD1306](https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf)
+- [Component Overview](#component_overview)
 
 
 
@@ -202,6 +199,17 @@ Circuit diagram and layout were created with [EasyEDA](https://easyeda.com/edito
 
 
 ## Code
+
+### Installation
+
+- load [code](#code) onto Arduino
+- launch python 
+    - optionally check if installed
+
+```
+sudo apt install python3
+```
+
 
 ### Arduino
 
